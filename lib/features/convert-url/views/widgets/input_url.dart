@@ -39,7 +39,7 @@ class InputUrl extends StatelessWidget {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(
                   10.0), 
-              borderSide: const BorderSide(color: AppColors.secondary), // Color del borde
+              borderSide: const BorderSide(color: AppColors.secondary),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(
