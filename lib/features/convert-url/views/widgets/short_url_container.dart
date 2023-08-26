@@ -19,9 +19,9 @@ class _ShortUrlContainerState extends ConsumerState<ShortUrlContainer> {
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         border: Border.all(
-            color: AppColors.secondary), // Cambia esto al color que desees
+            color: AppColors.secondary), 
         borderRadius:
-            BorderRadius.circular(8.0), // Cambia el radio si es necesario
+            BorderRadius.circular(8.0), 
       ),
       child: Row(children: [const Text("Short URL: ", style: TextStyle(fontWeight: FontWeight.bold),), Text(shortUrl)]),
     );

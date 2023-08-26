@@ -7,13 +7,15 @@ import 'package:pc_url/features/convert-url/repositories/short_url_repository.da
 import 'package:http/http.dart' as http;
 
 class ShortUrlRepositoryImpl extends ShortUrlRepository {
+  final http.Client _httpClient;
   /// Default constructor for [ShortUrlRepositoryImpl] object.
-  ShortUrlRepositoryImpl();
+  ShortUrlRepositoryImpl({http.Client? httpClient}) : _httpClient = httpClient ?? http.Client();
+  
 
   @override
   Future<ShortUrl> getShortUrl(String longUrl) async {
     var url = Uri.parse("${Environment.apiUrl}shorten");
-    final res = await http.post(
+    final res = await _httpClient.post(
       url,
       body: {'url': longUrl},
     );
